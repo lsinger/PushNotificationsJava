@@ -1,0 +1,24 @@
+Send push notifications using Java. 
+===================================
+
+The org.singr.PushNotification class represents push notifications you want to send to an Apple mobile device via the Push Notifications application (<a href="http://www.appnotifications.com/">http://www.appnotifications.com/</a>). The class uses the application's public HTTP API. 
+
+Construct a message using one of the constructors and add properties via the provided setters. For sounds and a message's urgency, you must use the provided enums, <code>PushNotification.Sound</code> and <code>PushNotification.Urgency</code>, respectively. 
+
+To send a message, call one of the <code>send</code> methods. One takes an API key, the other one takes a user's email address and password to resolve the API key itself before sending. Resolved API keys are cached. The cache is local to a JVM instance. 
+
+There is no limit on sending a single <code>PushNotification</code> instance. You could, e.g., construct a notification and loop over a list of API keys to send the same notification to a list of users. 
+
+To just retrieve the API key for a user, use the <code>resolveApiKey</code> method. The API key for a user can also be found in the <a href="http://www.appnotifications.com/account/rest_api">API section of the Push Notifications website</a>. 
+
+Receivers of push notifications must have the Push Notifications application installed. 
+
+&copy; Leif Singer, June 4th 2010
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. The name of the author may not be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
