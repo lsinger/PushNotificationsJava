@@ -1,19 +1,19 @@
 Send push notifications using Java. 
 ===================================
 
-The org.singr.PushNotification class represents push notifications you want to send to an Apple mobile device via the Push Notifications application (<a href="http://www.appnotifications.com/">http://www.appnotifications.com/</a>). The class uses the application's public HTTP API. 
+The org.singr.PushNotification class represents push notifications you want to send to an Apple mobile device via the Push Notifications application (http://www.appnotifications.com/). The class uses the application's public HTTP API. 
 
-Construct a message using one of the constructors and add properties via the provided setters. For sounds and a message's urgency, you must use the provided enums, <code>PushNotification.Sound</code> and <code>PushNotification.Urgency</code>, respectively. 
+Construct a message using one of the constructors and add properties via the provided setters. For sounds and a message's urgency, you must use the provided enums, PushNotification.Sound and PushNotification.Urgency, respectively. 
 
-To send a message, call one of the <code>send</code> methods. One takes an API key, the other one takes a user's email address and password to resolve the API key itself before sending. Resolved API keys are cached. The cache is local to a JVM instance. 
+To send a message, call one of the send methods. One takes an API key, the other one takes a user's email address and password to resolve the API key itself before sending. Resolved API keys are cached. The cache is local to a JVM instance. 
 
-There is no limit on sending a single <code>PushNotification</code> instance. You could, e.g., construct a notification and loop over a list of API keys to send the same notification to a list of users. 
+There is no limit on sending a single PushNotification instance. You could, e.g., construct a notification and loop over a list of API keys to send the same notification to a list of users. 
 
-To just retrieve the API key for a user, use the <code>resolveApiKey</code> method. The API key for a user can also be found in the <a href="http://www.appnotifications.com/account/rest_api">API section of the Push Notifications website</a>. 
+To just retrieve the API key for a user, use the resolveApiKey method. The API key for a user can also be found in the API section of the Push Notifications website (http://www.appnotifications.com/account/rest_api). 
 
 Receivers of push notifications must have the Push Notifications application installed. 
 
-&copy; Leif Singer, June 4th 2010
+(c) Leif Singer, June 4th 2010
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
